@@ -1,4 +1,4 @@
-class soduku():
+class Sodoku():
         def __init__(self, grid):
               self.grid = grid
 
