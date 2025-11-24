@@ -1,6 +1,8 @@
+#Import Sudoku class
 from sodoku import Sodoku
 
 def import_data():
+    """Read sudoku puzzle from file and return as 2D grid"""
     with open ("sodoku-data.txt", "r") as file:
         grid = []
         for line in file:
@@ -12,6 +14,7 @@ def import_data():
             grid.append(numbers)
         return grid
 def sodoku_solve(grid):  
+    """Solve sudoku puzzle using backtracking algorithm"""
     sodoku = Sodoku(grid)
     for row in range(9):
         for col in range(9):
@@ -27,11 +30,13 @@ def sodoku_solve(grid):
     return True
 
 def print_grid(grid):
+    """Display sudoku grid in readable format"""
     for row in grid:
         for number in row:
             print(number, end=" ")
         print()
 
+# Main execution
 grid = import_data()
 print ("unsolved sodoku")
 print_grid(grid)
