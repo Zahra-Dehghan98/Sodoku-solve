@@ -7,3 +7,6 @@ A Python-based Sudoku solver implemented using Object-Oriented Programming (OOP)
 - Backtracking algorithm for solving
 - File input support
 - Modular code structure
+
+How to RUN:
+python main.py
